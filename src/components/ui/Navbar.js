@@ -8,7 +8,9 @@ export const Navbar = () => {
 
         const navigate = useNavigate();
 
-        
+        navigate('/login', {
+            replace: true
+        });
     }
 
     return (
