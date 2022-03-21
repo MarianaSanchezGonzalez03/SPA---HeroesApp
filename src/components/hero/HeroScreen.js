@@ -7,7 +7,7 @@ export const HeroScreen = () => {
 
     const navigate = useNavigate();
 
-  const hero = getHeroById(heroeId);
+    const hero = useMemo( () => getHeroById(heroeId), [heroeId]);
 
   const handleReturn = () => {
     navigate(-1)
@@ -34,7 +34,7 @@ export const HeroScreen = () => {
       <img 
          src={ imgPath }
          alt={ superhero }
-         className="img-thumbnail"
+         className="img-thumbnail animate__animated animate__backInLeft"
       />
     </div>
 
